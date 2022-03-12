@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #d8e5f7;
+  font-family: "Noto Sans", sans-serif;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1.5px solid #ececec;
+}
+
+a {
+  color: #007bac;
+}
+
+a:hover {
+  color: #08070f;
+  cursor: pointer;
+}
+
+nav {
+  background: linear-gradient(#6689bb, #7a9dd1, #6689bb);
+  color: white;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #d4e1f5;
+  cursor: pointer;
+}
+
+nav > div {
+  display: flex;
+}
+
+nav p {
+  margin: 0 15px;
+  align-self: center;
+  font-size: 0.9em;
+}
+
+nav p:hover {
+  color: #d4e1f5;
+  cursor: pointer;
+}
+
+nav strong {
+  color: #304f7a;
+  cursor: text;
+}
+
+.input {
+  background-color: #607fac;
+  border-radius: 5px;
+  height: 27px;
+  width: 200px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input input {
+  border: 0;
+  margin-left: 7px;
+  height: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.lupa {
+  height: 15px;
+  margin-left: 5px;
+}
+
+.logo {
+  width: 75px;
+  height: 100%;
+  background: linear-gradient(#dfdfdf, #ffffff, #c2c2c2);
+  padding: 5.5px 15px 8px 12px;
+  margin-left: 20px;
+  box-shadow: 9px 9px 4px -8px #6e6e6e;
+  box-shadow: inset 0 0 2px #636363;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-areas:
+    "profile    about        communities"
+    "profile    fotos        communities"
+    "........    fotos        communities"
+    "........   videos       communities"
+    "........   videos       communities"
+    ".......    depoimentos   communities"
+    ".......    depoimentos   ..........";
+  gap: 10px;
+  margin: 20px;
+}
+
+.profile {
+  grid-area: profile;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+  padding: 20px 15px;
+}
+
+.profile img {
+  max-width: 100%;
+}
+
+.blue {
+  color: #276983;
+}
+
+.profile small {
+  color: #8b8b8b;
+}
+
+.profile-tags p {
+  color: #505050;
+  background-color: #f5f8ff;
+  border: 1px solid #e0e0e0;
+  padding-left: 5px;
+}
+
+.profile p:hover {
+  color: #08070f;
+  cursor: pointer;
+}
+
+.profile hr {
+  margin: 5px 0;
+}
+
+.profile a {
+  text-decoration: none;
+  color: #007bac;
+}
+
+/* ABOUT */
+
+.about {
+  grid-area: about;
+  background-color: white;
+  border-radius: 8px 50px 8px 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+}
+
+.about img {
+  width: 200px;
+}
+
+.about h3 {
+  padding: 10px 15px;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.about strong {
+  color: white;
+  background: linear-gradient(#5e88c3, #779ace, #5e88c3);
+  padding: 2px 7px;
+  border-radius: 5px 5px 0 0;
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+
+.about div {
+  display: flex;
+  margin: 0 5px;
+}
+
+.grey {
+  color: #666666;
+  min-width: 200px;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.dark-light-info {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 140px);
+}
+
+.dark-light-info div {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.dark-blue {
+  background-color: #dceefd;
+  padding: 1.5px 0;
+}
+
+.light-blue {
+  background-color: #eef8fe;
+  padding: 1.5x 0;
+}
+
+.about hr {
+  margin: 0 10px;
+}
+
+.about-items {
+  display: flex;
+}
+
+.about-items a {
+  text-decoration: none;
+  color: black;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
+}
+
+.darker {
+  border-bottom: 1.5px solid #a5a5a5;
+}
+
+#recados,
+#aboutFotos,
+#aboutVideos,
+#fas {
+  cursor: pointer;
+}
+
+/* projects  */
+
+.projects {
+  grid-area: projects;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+}
+
+.the-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px 5px;
+  gap: 5px 0px;
+}
+
+.projects h4 {
+  margin: 10px 15px;
+}
+
+.project {
+  background-color: #f3f3f3;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project img {
+  width: calc(100% - 10px);
+  margin: 5px;
+}
+
+.project a {
+  text-decoration: none;
+  color: #007bac;
+  text-align: center;
+  height: 50px;
+}
+
+.project a:hover {
+  color: #08070f;
+  cursor: pointer;
+}
+
+.ver-todos {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* communities */
+
+.communities {
+  grid-area: communities;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+}
+
+.communities h4 {
+  margin: 10px 15px;
+}
+
+.community {
+  background-color: #f3f3f3;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.community img {
+  width: calc(100% - 10px);
+  margin: 5px;
+}
+
+.community a {
+  text-decoration: none;
+  color: #007bac;
+  text-align: center;
+  height: 70px;
+}
+
+.community a:hover {
+  color: #08070f;
+  cursor: pointer;
+}
+
+.ver-mais {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.the-communities {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px 5px;
+  gap: 5px 0px;
+}
+
+/* LEGENDA */
+
+.legenda-none {
+  display: none;
+}
+
+.legenda {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 150px;
+  background-color: #d4e1f0;
+  border: 6px solid white;
+  border-bottom: 0;
+  padding: 5px;
+  position: fixed;
+  width: 300px;
+  box-shadow: inset 0.7px 0.7px 4px #bad6e0;
+}
+
+.legenda h5 {
+  background-color: #e4efff;
+  height: 25px;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+}
+
+.inner div {
+  margin: 10px 5px;
+}
+
+.inner {
+  background-color: #d4e1f0;
+  border: 1px solid #bdcada;
+  border-bottom: 0;
+  height: 300px;
+  margin-bottom: 0;
+  padding: 2px;
+  box-shadow: inset 0.7px 0.7px 4px #cad8dd;
+}
+
+/* POPUPS */
+
+.fotos-popup,
+.videos-popup,
+.depo-popup,
+.bolo-popup {
+  display: none;
+}
+
+.fotos-popup-block,
+.videos-popup-block,
+.depo-popup-block,
+.bolo-popup-block {
+  display: block;
+  position: absolute;
+  color: #304f7a;
+  font-weight: bold;
+  background-color: #d4e1f0;
+  padding: 50px;
+  border: 7px solid #fafafa;
+  top: 35%;
+  left: 50%;
+  margin-left: -120px;
+  position: fixed;
+}
+
+/* FOTOS, VIDEOS, DEPOIMENTOS */
+
+.fotos {
+  grid-area: fotos;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+  padding: 20px 15px;
+}
+
+.videos {
+  grid-area: videos;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+  padding: 20px 15px;
+}
+
+.depoimentos {
+  grid-area: depoimentos;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset -1px -1px 2px 0.5px #b3b3b3;
+  padding: 20px 15px;
+}
+
+.fotos h4,
+.videos h4,
+.depoimentos h4 {
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.right {
+  transform: rotate(270deg);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.bottom {
+  transform: rotate(0deg);
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+h4 a {
+  margin-left: 5px;
+}
+
+.fotos div,
+.videos div,
+.depoimentos div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fotos a,
+.videos a,
+.depoimentos a {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 1100px) {
+  main {
+    grid-template-columns: 95%;
+    justify-content: center;
+    grid-template-areas:
+      "profile"
+      "about"
+      "projects"
+      "communities"
+      "fotos"
+      "videos"
+      "depoimentos";
+    gap: 10px;
+    margin: 20px;
+  }
+
+  .profile {
+    max-width: 250px;
+  }
+
+  .about {
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-div {
+    display: none;
+  }
+
+  .dark-light-info {
+    height: calc(100% - 400px);
+  }
+
+  .dark-light-info div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grey {
+    min-width: unset;
+    margin-bottom: 5px;
+  }
+
+  .dark-blue,
+  .light-blue {
+    padding: 5px;
+  }
+
+  .about-items {
+    flex-direction: column;
+    align-items: center;
+  }
+}
